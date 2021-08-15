@@ -30,7 +30,9 @@ https://yuki-sakaguchi.github.io/threejs-glitch/part03/out/
 ## おまけ）Nuxt.jsとNext.jsで静的ビルトしたファイルをGitHub Pagesにあげる方法
 
 どちらもまあまあ苦労した...  
-「置けば動く」の状態には持っていけなかった
+「置けば動く」の状態には持っていけなかった. 
+
+GitHub Actions を使えばいけそうだけどちょっと面倒だったので試してない. 
 
 ## 共通
 
