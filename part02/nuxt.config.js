@@ -53,6 +53,6 @@ export default {
   },
 
   router: {
-    base: '/threejs-glitch/part02/'
+    base: '/threejs-glitch/part02/dist/'
   }
 }
