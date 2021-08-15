@@ -33,7 +33,7 @@ router: {
 
 # Part03（Next.js + Three.js）
 
-https://yuki-sakaguchi.github.io/threejs-glitch/part03/
+https://yuki-sakaguchi.github.io/threejs-glitch/part03/out/
 
 
 
@@ -42,3 +42,7 @@ https://yuki-sakaguchi.github.io/threejs-glitch/part03/
 - https://note.com/unshift/n/n0f707c95912e
 - https://qiita.com/misaki_mofu/items/145ac26d600b429a6f8a
 - https://ja.nuxtjs.org/docs/2.x/deployment/github-pages
+- https://qiita.com/did0es/items/673735d7a241698e9114
+- https://blog.narumium.net/2020/06/10/glsl%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92import%E3%81%99%E3%82%8B/
+- https://blog.5ebec.dev/posts/webpack-ts-three-js-glsl/
+- https://nextjs-ja-translation-docs.vercel.app/docs/advanced-features/module-path-aliases
