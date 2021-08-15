@@ -20,9 +20,7 @@ export default {
   },
   mounted() {
     this.glitch = new Glitch(this.imgList);
-    this.glitch.init(() => {
-      this.glitch.start();
-    });
+    this.glitch.init(() => this.glitch.start());
   },
   destroyed() {
     this.glitch.destroyed();

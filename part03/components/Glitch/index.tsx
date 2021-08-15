@@ -16,7 +16,10 @@ const Glitch = ({ images }) => {
   let renderer = undefined;
   let scene = undefined;
   let camera = undefined;
-  let canvasSize = { width: undefined, height: undefined };
+  let canvasSize = {
+    width: undefined,
+    height: undefined
+  };
   let glitchAnimation = undefined;
 
   /**
