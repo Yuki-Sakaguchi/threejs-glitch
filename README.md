@@ -9,8 +9,7 @@ https://yuki-sakaguchi.github.io/threejs-glitch/part01/
 
 # Part02（Nuxt.js + Three.js）
 
-https://yuki-sakaguchi.github.io/threejs-glitch/part02/
-
+https://yuki-sakaguchi.github.io/threejs-glitch/part02/dist/
 
 
 # Part03（Next.js + Three.js）
