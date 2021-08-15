@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Glitch from '@/components/Glitch';
 
 export default function Home() {
@@ -9,6 +10,9 @@ export default function Home() {
   ];
   return (
     <>
+      <Head>
+        <title>threejs glitch for Next.js.</title>
+      </Head>
       <Glitch images={images}/>
     </>
   );
