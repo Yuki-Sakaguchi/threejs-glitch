@@ -7,7 +7,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'part02',
+    title: 'threejs glitch for Nuxt.js.',
     htmlAttrs: {
       lang: 'en'
     },

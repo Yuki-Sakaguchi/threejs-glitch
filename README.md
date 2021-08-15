@@ -12,7 +12,7 @@ https://yuki-sakaguchi.github.io/threejs-glitch/part01/
 https://yuki-sakaguchi.github.io/threejs-glitch/part02/dist/
 
 
-## Part03（Next.js + Three.js）
+## Part03（Next.js + Three.js + TypeScript）
 
 https://yuki-sakaguchi.github.io/threejs-glitch/part03/out/
 
@@ -29,18 +29,18 @@ https://yuki-sakaguchi.github.io/threejs-glitch/part03/out/
 
 ## おまけ）Nuxt.jsとNext.jsで静的ビルトしたファイルをGitHub Pagesにあげる方法
 
-どちらもまあまあ苦労した...
-「おけば動く」の状態には持っていけなかった
+どちらもまあまあ苦労した...  
+「置けば動く」の状態には持っていけなかった
 
 ## 共通
 
-どちらも生成されるファイルにアンダースコアが含まれているが GitHub Pages はアンスコ始まるのファイルやディレクトリを無視するらしいのでそれを無効にする必要がある。
+どちらも生成されるファイルにアンダースコアが含まれているが GitHub Pages はアンスコ始まるのファイルやディレクトリを無視するらしいのでそれを無効にする必要がある。  
 ドキュメントルートに `.nojekyll` という名前のファイルをおけばOK
 
 ### Nuxt.js
 
-`nuxt.config.js` に追加する設定はこちら
-これと.nojekyllファイルがあれば `npm run generate` でビルドされた静的ファイルがそのまま動くようになる
+`nuxt.config.js` に追加する設定はこちら  
+これと.nojekyllファイルがあれば `npm run generate` でビルドされた静的ファイルがそのまま動くようになる  
 デフォルトでは `dist` ディレクトリは `.gitignore` で除外しているのでそれもコメントアウトしておく
 
 ```js
@@ -58,8 +58,8 @@ router: {
 
 ### Next.js
 
-`next.config.js` に追加する設定はこちら（色々調べてこれでいけたけどもっとベストがありそう...でも疲れたので諦めた）
-デフォルトだと静的ビルトコマンドがないので `"export": "next build && next export"` こんな感じのコマンドを追加して叩く
+`next.config.js` に追加する設定はこちら（色々調べてこれでいけたけどもっとベストがありそう...でも疲れたので諦めた）  
+デフォルトだと静的ビルトコマンドがないので `"export": "next build && next export"` こんな感じのコマンドを追加して叩く  
 Nuxt.jsと同じように `out` ディレクトリは無視されているのでそれは解除しておく
 
 ```js
