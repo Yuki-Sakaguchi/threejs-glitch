@@ -2,22 +2,22 @@
 
 ![result](https://user-images.githubusercontent.com/16290220/129472100-b8ac86cd-c147-41da-9cf4-6cecfa595450.gif)
 
-# Part01（Three.js）
+## Part01（Three.js）
 
 https://yuki-sakaguchi.github.io/threejs-glitch/part01/
 
 
-# Part02（Nuxt.js + Three.js）
+## Part02（Nuxt.js + Three.js）
 
 https://yuki-sakaguchi.github.io/threejs-glitch/part02/dist/
 
 
-# Part03（Next.js + Three.js）
+## Part03（Next.js + Three.js）
 
 https://yuki-sakaguchi.github.io/threejs-glitch/part03/out/
 
 
-# 参考
+## 参考
 
 - https://note.com/unshift/n/n0f707c95912e
 - https://qiita.com/misaki_mofu/items/145ac26d600b429a6f8a
@@ -27,7 +27,7 @@ https://yuki-sakaguchi.github.io/threejs-glitch/part03/out/
 - https://blog.5ebec.dev/posts/webpack-ts-three-js-glsl/
 - https://nextjs-ja-translation-docs.vercel.app/docs/advanced-features/module-path-aliases
 
-# おまけ）Nuxt.jsとNext.jsで静的ビルトしたファイルをGitHub Pagesにあげる方法
+## おまけ）Nuxt.jsとNext.jsで静的ビルトしたファイルをGitHub Pagesにあげる方法
 
 どちらもまあまあ苦労した...
 「おけば動く」の状態には持っていけなかった
@@ -37,7 +37,7 @@ https://yuki-sakaguchi.github.io/threejs-glitch/part03/out/
 どちらも生成されるファイルにアンダースコアが含まれているが GitHub Pages はアンスコ始まるのファイルやディレクトリを無視するらしいのでそれを無効にする必要がある。
 ドキュメントルートに `.nojekyll` という名前のファイルをおけばOK
 
-## Nuxt.js
+### Nuxt.js
 
 `nuxt.config.js` に追加する設定はこちら
 これと.nojekyllファイルがあれば `npm run generate` でビルドされた静的ファイルがそのまま動くようになる
@@ -56,7 +56,7 @@ router: {
 }
 ```
 
-## Next.js
+### Next.js
 
 `next.config.js` に追加する設定はこちら（色々調べてこれでいけたけどもっとベストがありそう...でも疲れたので諦めた）
 デフォルトだと静的ビルトコマンドがないので `"export": "next build && next export"` こんな感じのコマンドを追加して叩く
