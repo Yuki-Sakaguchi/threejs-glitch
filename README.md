@@ -1,6 +1,6 @@
 # Three.jsでグリッチのエフェクトを実装する
 
-
+![result](https://user-images.githubusercontent.com/16290220/129472100-b8ac86cd-c147-41da-9cf4-6cecfa595450.gif)
 
 # Part01（Three.js）
 
