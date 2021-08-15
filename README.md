@@ -11,11 +11,37 @@ https://yuki-sakaguchi.github.io/threejs-glitch/part01/
 
 https://yuki-sakaguchi.github.io/threejs-glitch/part02/dist/
 
-`nuxt.js` で動かすためには諸々の関連ファイルを `components` にまとめて使うページで読み込むくらいにできた。  
-`vert` も `frag` もそれぞれファイルに分けて import するようにした  
-必要なのは `raw-loader` なのでそれは別途インストールした
 
-`nuxt.config.js` にこれを書いたらどこでも動くようになった（ローカルスト立ち上げれば）
+# Part03（Next.js + Three.js）
+
+https://yuki-sakaguchi.github.io/threejs-glitch/part03/out/
+
+
+# 参考
+
+- https://note.com/unshift/n/n0f707c95912e
+- https://qiita.com/misaki_mofu/items/145ac26d600b429a6f8a
+- https://ja.nuxtjs.org/docs/2.x/deployment/github-pages
+- https://qiita.com/did0es/items/673735d7a241698e9114
+- https://blog.narumium.net/2020/06/10/glsl%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92import%E3%81%99%E3%82%8B/
+- https://blog.5ebec.dev/posts/webpack-ts-three-js-glsl/
+- https://nextjs-ja-translation-docs.vercel.app/docs/advanced-features/module-path-aliases
+
+# おまけ）Nuxt.jsとNext.jsで静的ビルトしたファイルをGitHub Pagesにあげる方法
+
+どちらもまあまあ苦労した...
+「おけば動く」の状態には持っていけなかった
+
+## 共通
+
+どちらも生成されるファイルにアンダースコアが含まれているが GitHub Pages はアンスコ始まるのファイルやディレクトリを無視するらしいのでそれを無効にする必要がある。
+ドキュメントルートに `.nojekyll` という名前のファイルをおけばOK
+
+## Nuxt.js
+
+`nuxt.config.js` に追加する設定はこちら
+これと.nojekyllファイルがあれば `npm run generate` でビルドされた静的ファイルがそのまま動くようになる
+デフォルトでは `dist` ディレクトリは `.gitignore` で除外しているのでそれもコメントアウトしておく
 
 ```js
 router: {
@@ -30,19 +56,16 @@ router: {
 }
 ```
 
+## Next.js
 
-# Part03（Next.js + Three.js）
+`next.config.js` に追加する設定はこちら（色々調べてこれでいけたけどもっとベストがありそう...でも疲れたので諦めた）
+デフォルトだと静的ビルトコマンドがないので `"export": "next build && next export"` こんな感じのコマンドを追加して叩く
+Nuxt.jsと同じように `out` ディレクトリは無視されているのでそれは解除しておく
 
-https://yuki-sakaguchi.github.io/threejs-glitch/part03/out/
+```js
+const isProd = process.env.NODE_ENV == 'production';
 
-
-
-# 参考
-
-- https://note.com/unshift/n/n0f707c95912e
-- https://qiita.com/misaki_mofu/items/145ac26d600b429a6f8a
-- https://ja.nuxtjs.org/docs/2.x/deployment/github-pages
-- https://qiita.com/did0es/items/673735d7a241698e9114
-- https://blog.narumium.net/2020/06/10/glsl%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92import%E3%81%99%E3%82%8B/
-- https://blog.5ebec.dev/posts/webpack-ts-three-js-glsl/
-- https://nextjs-ja-translation-docs.vercel.app/docs/advanced-features/module-path-aliases
+module.exports = {
+  basePath: isProd ? '/threejs-glitch/part03/out' : '',
+  assetPrefix: isProd ? 'https://yuki-sakaguchi.github.io/threejs-glitch/part03/out' : '',
+```
