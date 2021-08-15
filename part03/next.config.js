@@ -1,9 +1,8 @@
 const isProd = process.env.NODE_ENV == 'production';
-const url = isProd ? '/threejs-glitch/part03/out' : '';
 
 module.exports = {
-  basePath: url,
-  assetPrefix: url,
+  basePath: isProd ? '/threejs-glitch/part03/out' : '',
+  assetPrefix:  isProd ? 'https://yuki-sakaguchi.github.io/threejs-glitch/part03/out' : '',
   webpack: (config) => {
     config.module.rules.push(
       {
