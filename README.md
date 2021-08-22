@@ -17,6 +17,10 @@ https://yuki-sakaguchi.github.io/threejs-glitch/part02/dist/
 https://yuki-sakaguchi.github.io/threejs-glitch/part03/out/
 
 
+## Part04（Three.js + mousemoveでグリッチを実行）
+
+https://yuki-sakaguchi.github.io/threejs-glitch/part04/
+
 ## 参考
 
 - https://note.com/unshift/n/n0f707c95912e
